@@ -1,0 +1,3 @@
+adivina-el-anime@1.0.0 D:\Datos\Desktop\proyecto\server
+`-- express@4.19.2
+

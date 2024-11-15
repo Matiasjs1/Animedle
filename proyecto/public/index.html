@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animedle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css" id="animaciones">
+    <link rel="shortcut icon" href="img/logoPagina.png">
+</head>
+
+<body id="fondo">
+    <header>
+        <button id="modoNoche" class="btn" onclick="darkmode('sunmoon','img/sun.png','img/moon.png')"><div id="circle"></div><img src="img/sun.png" id="sunmoon" class="rotate"></button>
+        <a href="index.html" id="tituloPag"><h1 class="zoom">ANIMEDLE</h1><img src="img/logoAnimedle.png" id="logo" class="hidden"></a>
+        <button class="btn" onclick="performanceMode()"><img src="img/settings.png" id="settings" class="rotate"></button>
+    </header>
+    
+    <nav>
+        
+        <ul>
+            <li id="anime" onclick="agregarQuitarClase('modosAnime','modosPersonaje','hidden'), agregarQuitarClase('personajeTexto','animeTexto','subrayado'),agregarQuitarClase('animeTexto','personajeTexto','underline')"><span id="animeTexto" class="underline">Anime</span></li>
+            <li id="personaje" onclick="agregarQuitarClase('modosPersonaje','modosAnime','hidden'),agregarQuitarClase('animeTexto','personajeTexto','subrayado'),agregarQuitarClase('personajeTexto','animeTexto','underline')"><span id="personajeTexto" class="underline">Personaje</span></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="hidden" id="modosAnime"> 
+                <a href="classicAnime.html" id="no-link"><p class="zoom boton">CLASSIC</p></a>
+                <a href="emojiAnime.html" id="no-link"><p class="zoom boton">EMOJI</p></a>
+            </div>
+        </div>
+        <div class="hidden" id="modosPersonaje">
+            <a href="classicPersonaje.html" id="no-link"><p class="zoom boton">CLASSIC</p></a>
+        </div>
+        <script src="animes.js"></script>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

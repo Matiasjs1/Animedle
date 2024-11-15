@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animedle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="shortcut icon" href="img/logoPagina.png">
+</head>
+<body id="fondo">
+    <header>
+        <a href="index.html" id="tituloPag"><h1 class="zoom">ANIMEDLE</h1><img src="img/logoAnimedle.png" id="logo" class="hidden"></a>
+    </header>
+    
+    <nav>
+        <ul class="hidden">
+            <li>
+                <a href="classicAnime.html" class="tooltip"><img class="fotos zoom tooltip" src="https://i.pinimg.com/474x/9f/d4/7c/9fd47c18a17261587e37a47fa272d552.jpg"><span class="tooltiptext">Clasico</span></a>
+            </li>
+            <li>
+                <a href="#" class="tooltip"><img class="fotos zoom" id="logoAnimeEmoji" src="img/animeEmoji.png"><span class="tooltiptext">Emoji</span></a>
+            </li>
+
+        </ul>
+    </nav>
+    
+    <main>
+        <div id="emojis">
+            <ul>
+                <li class="zoom"><p id="emoji1"></p></li>
+                <li class="zoom"><p id="emoji2"></p></li>
+                <li class="zoom"><p id="emoji3"></p></li>
+                <li class="zoom"><p id="emoji4"></p></li>
+            </ul> 
+        </div>
+        <div id="animeInputContainer" >
+            <input type="text" id="animeInput" placeholder="Ingresa el nombre del anime" onclick="mostrarListaAnimes()">
+            <div id="animeSelectContainer" class="hidden">
+                <select id="animeSelect" size="5" onchange="seleccionarAnime()" onclick="mostrarListaAnimes()"></select>
+            </div>
+        </div>
+        
+        <p id="resultado"></p>
+        <p id="intentos"></p>
+        
+        <table id="franquiciaTable">
+            <thead>
+                <th></th>
+        </table>
+        <script src="emojis.js"></script>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

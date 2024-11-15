@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animedle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="shortcut icon" href="img/logoPagina.png">
+</head>
+<body id="fondo">
+    <header>
+        <a href="index.html" id="tituloPag"><h1 class="zoom">ANIMEDLE</h1><img src="img/logoAnimedle.png" id="logo" class="hidden"></a>
+    </header>
+    
+    <nav>
+        <ul class="hidden">
+            <li>
+                <a href="classicAnime.html" class="tooltip"><img class="fotos zoom tooltip" src="https://i.pinimg.com/474x/9f/d4/7c/9fd47c18a17261587e37a47fa272d552.jpg"><span class="tooltiptext">Clasico</span></a>
+            </li>
+            <li>
+                <a href="#" class="tooltip"><img class="fotos zoom" id="logoAnimeEmoji" src="img/animeEmoji.png"><span class="tooltiptext">Emoji</span></a>
+            </li>
+
+        </ul>
+    </nav>
+    
+    <main>
+        <div id="pistas">
+            <ul>
+                <li class="tooltip zoom" onclick="mostrarPistaAnimes('pista1', 5,'pista2','pista3'),mostrarPistaAnimes('arrow-up1', 5,'arrow-up2','arrow-up3')"><img src="img/pistaArteAnime.png" id="imagenArte"><span class="tooltiptext">Estudio de Animacion</span><div id="arrow-up1" class="hidden arrow"></div></li>
+                <li class="tooltip zoom" onclick="mostrarPistaAnimes('pista2', 10,'pista1','pista3'),mostrarPistaAnimes('arrow-up2', 10,'arrow-up1','arrow-up3')"><img src="img/pistaInicialAnime.png" id="imagenInicial"><span class="tooltiptext">Inicial del Anime</span><div id="arrow-up2" class="hidden arrow"></div></li>
+                <li class="tooltip zoom" onclick="mostrarPistaAnimes('pista3', 15,'pista1','pista2'),mostrarPistaAnimes('arrow-up3', 15,'arrow-up1','arrow-up2')"><img src="img/pistaDescripcionAnime.png" id="imagenDescripcion"><span class="tooltiptext">Descripcion del Anime</span><div id="arrow-up3" class="hidden arrow"></div></li>
+            </ul>
+            <p id="pista1" class="hidden"></p>
+            <p id="pista2" class="hidden"></p>
+            <p id="pista3" class="hidden"></p> 
+        </div>
+        <div id="animeInputContainer" >
+            <input type="text" id="animeInput" placeholder="Ingresa el nombre del anime" onclick="mostrarListaAnimes()">
+            <div id="animeSelectContainer" class="hidden">
+                <select id="animeSelect" size="5" onchange="seleccionarAnime()" onclick="mostrarListaAnimes()"></select>
+            </div>
+        </div>
+        <p id="resultado"></p>
+        <p id="intentos"></p>
+        
+        <table id="animeTable">
+            <thead>
+                <th>Anime</th>
+                <th>Franquicia</th>
+                <th>Lanzamiento</th>
+                <th>Temas</th>
+                <th>Episodios</th>
+                <th>Generos</th>
+                <th>Estudio</th>
+            </thead>
+        </table>
+        <script src="animes.js"></script>
+        <div id="indicadorColores">
+            <div onclick="toggleIndicadorColores()"><img src="https://icones.pro/wp-content/uploads/2021/08/icone-x-avec-cercle-rouge.png" alt="Cerrar" id="botonCerrar"></div>
+                <p id="tituloIndicador">Indicador de colores</p>
+            <ul>
+                <li>
+                    Incorrecto
+                    <div class="cuadrado rojo"></div>
+                </li>
+                <li>
+                    Parcialmente 
+                    <div class="cuadrado naranja"></div>
+                </li>
+                <li>
+                    Correcto
+                    <div class="cuadrado verde"></div>
+                </li>
+                <li>
+                    Mas alto
+                    <div class="cuadrado rojo">
+                        <p id="signos">⇧</p>
+                    </div>
+                </li>
+                <li>
+                    Mas bajo
+                    <div class="cuadrado rojo">
+                        <p id="signos">⇩</p>
+                    </div>
+                </li>
+                <li>
+                    No pertenece
+                    <div class="cuadrado rojo">
+                        <p id="signos">X</p>
+                    </div>
+                </li>
+                <li>
+                    Pertenece
+                    <div class="cuadrado verde">
+                        <p id="signos">✓</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

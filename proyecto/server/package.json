@@ -1,0 +1,15 @@
+{
+    "name": "adivina-el-anime",
+    "version": "1.0.0",
+    "description": "Una aplicación para adivinar el nombre de un anime",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "csv-parser": "^3.0.0",
+        "express": "^4.19.2"
+    },
+    "author": "Tu Nombre",
+    "license": "MIT"
+}
